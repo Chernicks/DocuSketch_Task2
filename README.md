@@ -1,3 +1,4 @@
+<pre>
 ЗАДАНИЕ
 Создать docker-compose.yml разворачивающий приложение на python с простой реализацией REST API. Решение должно состоять из двух контейнеров:
 а) Любая NoSQL DB.
@@ -64,10 +65,11 @@ docker-compose up
 Удалим документ колеекции
 Для этого сформируем запрос с использованием метода DELETE
 В body сформируем raw JSON с содержимым:
-{
+
   "database": "IshmeetDB",
   "collection": "people",
   "Filter": {
     "First_Name": "Jhon"
   }
 }
+</pre>
