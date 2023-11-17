@@ -1,0 +1,15 @@
+version: "1"
+# У нас бдует два сервиса
+services: 
+    # Первый отвечает за MongoDB
+    mymongo:
+        image: "mongo"
+        ports:
+          - 27017:27017
+    # Второй за приложение Flask
+    myflask:
+        build: .
+        depends_on: 
+            - mymongo
+        ports:
+            - "8080:8080"
